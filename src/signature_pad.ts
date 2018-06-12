@@ -294,11 +294,11 @@ export default class SignaturePad {
 
     // TS 2.8.1 has incorrect type definition for touch event handlers
     // @ts-ignore
-    this.canvas.addEventListener("touchstart", this._handleTouchStart);
+	this.canvas.addEventListener("touchstart", this._handleTouchStart, { passive: false });
     // @ts-ignore
-    this.canvas.addEventListener("touchmove", this._handleTouchMove);
+	this.canvas.addEventListener("touchmove", this._handleTouchMove, { passive: false });
     // @ts-ignore
-    this.canvas.addEventListener("touchend", this._handleTouchEnd);
+	this.canvas.addEventListener("touchend", this._handleTouchEnd, { passive: false });
   }
 
   // Called when a new line is started
